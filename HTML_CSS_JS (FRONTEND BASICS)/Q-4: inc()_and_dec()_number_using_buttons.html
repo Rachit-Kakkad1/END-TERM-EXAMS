@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Increase Decrease Number</title>
+</head>
+
+<body>
+    <p id="number"></p>
+
+    <button onclick="inc()">+</button>
+    <button onclick="dec()">-</button>
+
+    <script>
+        let n = Number(localStorage.getItem("n")) || 0;
+        document.getElementById("number").innerHTML = n;
+
+        function inc() {
+            n++;
+            localStorage.setItem("n", n);
+            document.getElementById("number").innerHTML = n;
+        }
+
+        function dec() {
+            n--;
+            localStorage.setItem("n", n);
+            document.getElementById("number").innerHTML = n;
+        }
+    </script>
+</body>
+
+</html>
